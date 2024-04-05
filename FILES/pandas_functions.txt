@@ -1,0 +1,107 @@
+Basic Functions:
+
+--pd.DataFrame() - Create a DataFrame
+pd.Series() - Create a Series
+-df.head() - Display the first n rows of a DataFrame
+-df.tail() - Display the last n rows of a DataFrame
+-df.shape - Get the dimensions of a DataFrame
+-df.columns - Get the column names of a DataFrame
+-df.index - Get the index of a DataFrame
+-df.info() - Get a concise summary of a DataFrame
+-df.describe() - Generate descriptive statistics of a DataFrame
+-df.dtypes - Get the data types of each column in a DataFrame
+-df.isnull() - Check for missing values in a DataFrame
+
+-df.fillna() - Replace missing values in a DataFrame
+
+df.dropna() - Drop rows with missing values from a DataFrame
+-df.astype() - Convert the data type of a column in a DataFrame
+-df.loc[] - Access a group of rows and columns by label(s)
+-df.iloc[] - Access a group of rows and columns by integer position(s)
+--df.groupby() - Group DataFrame using a mapper or by a Series of columns
+--df.sort_values() - Sort a DataFrame by one or more columns
+--df.merge() - Merge two DataFrames on a common column
+--df.concat() - Concatenate two or more DataFrames
+
+Intermediate Functions:
+--21. df.apply() - Apply a function along an axis of a DataFrame
+
+df.map() - Map values of a Series according to input correspondence
+df.replace() - Replace values in a DataFrame
+df.drop() - Drop specified labels from rows or columns in a DataFrame
+df.rename() - Rename columns or index labels in a DataFrame
+df.pivot_table() - Create a spreadsheet-style pivot table as a DataFrame
+df.melt() - Unpivot a DataFrame from wide to long format
+df.stack() - Pivot a level of the (possibly hierarchical) column labels
+df.unstack() - Pivot a level of the (possibly hierarchical) row index labels
+df.duplicated() - Check for duplicate rows in a DataFrame
+df.drop_duplicates() - Drop duplicate rows from a DataFrame
+df.corr() - Compute pairwise correlation of columns in a DataFrame
+df.cov() - Compute pairwise covariance of columns in a DataFrame
+df.diff() - Compute the difference of a DataFrame element compared with another element in the DataFrame
+df.expanding() - Provide expanding transformations for a DataFrame
+df.rolling() - Provide rolling transformations for a DataFrame
+df.resample() - Convenience method for frequency conversion and resampling of time series
+df.to_csv() - Write object to a comma-separated values (CSV) file
+df.to_excel() - Write object to an Excel sheet
+df.to_sql() - Write records stored in a DataFrame to a SQL database
+Advanced Functions:
+41. df.style() - Apply a conditional formatting to a DataFrame
+
+df.query() - Query the columns of a DataFrame with a boolean expression
+df.eval() - Evaluate a string describing operations on DataFrame columns
+df.interpolate() - Fill NaN values in a DataFrame or Series using interpolation
+df.to_json() - Convert the object to a JSON string
+df.to_dict() - Convert the DataFrame to a dictionary
+df.to_clipboard() - Copy object to the system clipboard
+df.to_latex() - Render object to a LaTeX tabular environment
+df.to_html() - Render a DataFrame as an HTML table
+df.to_feather() - Write a DataFrame to the Feather binary file format
+
+Time Series Functions:
+51. pd.date_range() - Generate a range of dates
+pd.to_datetime() - Convert input to datetime
+df.resample() - Resample time-series data
+df.shift() - Shift index by desired number of periods
+df.diff() - Compute the difference of a DataFrame element compared with another element in the DataFrame
+df.rolling() - Provide rolling transformations for a DataFrame
+df.expanding() - Provide expanding transformations for a DataFrame
+df.first() - Compute first of group values
+df.last() - Compute last of group values
+df.cumsum() - Compute cumulative sum of group values
+
+String Functions:
+61. df.str.lower() - Convert strings in the Series/Index to lowercase
+df.str.upper() - Convert strings in the Series/Index to uppercase
+df.str.title() - Convert strings in the Series/Index to titlecase
+df.str.strip() - Remove leading and trailing whitespace
+df.str.replace() - Replace occurrences of pattern/regex in the Series/Index
+df.str.split() - Split strings in the Series/Index using the given delimiter
+df.str.contains() - Return boolean array indicating whether each element contains the pattern/regex
+df.str.extract() - Extract capture groups in the regex pat as columns in a DataFrame
+df.str.len() - Compute the length of each string in the Series/Index
+
+Statistical Functions:
+70. df.mean() - Compute the mean of the values in a DataFrame
+df.median() - Compute the median of the values in a DataFrame
+df.mode() - Compute the mode(s) of the values in a DataFrame
+df.sum() - Compute the sum of the values in a DataFrame
+df.std() - Compute the standard deviation of the values in a DataFrame
+df.var() - Compute the variance of the values in a DataFrame
+df.min() - Compute the minimum of the values in a DataFrame
+df.max() - Compute the maximum of the values in a DataFrame
+df.quantile() - Compute the quantile(s) of the values in a DataFrame
+df.skew() - Compute the skewness of the values in a DataFrame
+df.kurt() - Compute the kurtosis of the values in a DataFrame
+
+Window Functions:
+81. df.rolling() - Provide rolling transformations for a DataFrame
+df.expanding() - Provide expanding transformations for a DataFrame
+df.ewm() - Provide exponential weighted functions for a DataFrame
+
+Resampling Functions:
+84. df.resample() - Resample time-series data
+df.asfreq() - Convert TimeSeries to specified frequency
+df.interpolate() - Fill NaN values in a DataFrame or Series using interpolation
+
+Indexing and Selection Functions:
