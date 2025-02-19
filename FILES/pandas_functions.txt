@@ -146,3 +146,43 @@ df.asfreq() - Convert TimeSeries to specified frequency
 df.interpolate() - Fill NaN values in a DataFrame or Series using interpolation
 
 Indexing and Selection Functions:
+
+
+import os
+import sys
+import subprocess
+
+def create_virtual_env(venv_name="venv"):
+    """Creates a virtual environment in the current directory."""
+    if not os.path.exists(venv_name):
+        print(f"Creating virtual environment: {venv_name}...")
+        subprocess.run([sys.executable, "-m", "venv", venv_name], check=True)
+        print("Virtual environment created successfully!")
+    else:
+        print(f"Virtual environment '{venv_name}' already exists.")
+
+def install_packages(venv_name="venv", packages=None):
+    """Installs the specified packages in the virtual environment."""
+    if packages:
+        print(f"Installing packages: {', '.join(packages)}...")
+        pip_path = os.path.join(venv_name, "Scripts" if os.name == "nt" else "bin", "pip")
+        subprocess.run([pip_path, "install"] + packages, check=True)
+        print("Packages installed successfully!")
+    else:
+        print("No packages specified. Skipping installation.")
+
+def main():
+    venv_name = "venv"
+    packages = sys.argv[1:]  # Get packages from command-line arguments
+
+    create_virtual_env(venv_name)
+    install_packages(venv_name, packages)
+
+    print("Setup complete! To activate the virtual environment:")
+    if os.name == "nt":
+        print(f"  {venv_name}\\Scripts\\activate")
+    else:
+        print(f"  source {venv_name}/bin/activate")
+
+if __name__ == "__main__":
+    main()
